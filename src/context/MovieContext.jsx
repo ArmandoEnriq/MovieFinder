@@ -12,7 +12,7 @@ export const MovieProvider = ({ children }) => {
   const searchMovies = async (query) => {
     try {
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`
       );
       const data = await response.json();
       if (data.Response === 'True') {
